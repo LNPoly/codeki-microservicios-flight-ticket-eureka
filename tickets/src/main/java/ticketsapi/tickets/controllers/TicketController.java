@@ -27,7 +27,7 @@ public class TicketController {
         return ticketService.getAllTickets();
     }
 
-    @PostMapping("/create")
+    @PostMapping("/create/flights/{flightId}")
     public Ticket createTicket(@RequestBody Ticket ticket){
         return ticketService.createTickets(ticket);
     }

@@ -1,0 +1,81 @@
+{
+	"info": {
+		"_postman_id": "b7a78fd8-c1e4-4910-a4cd-f762e37bad54",
+		"name": "Company",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "24011261"
+	},
+	"item": [
+		{
+			"name": "UpdateCompany",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"name\": \"Aerolíneas\",\r\n    \"page\": \"https://www.aerolineas.com.ar/\",\r\n    \"banner\": \"AerolineasLogo.jpg\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/company/update"
+			},
+			"response": []
+		},
+		{
+			"name": "CreateCompany",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Aerolíneas Argentinas\",\r\n    \"page\": \"https://www.aerolineas.com.ar/\",\r\n    \"banner\": \"AerolineasLogo.jpg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:50066/company/create"
+			},
+			"response": []
+		},
+		{
+			"name": "Get all companies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:50066/company/allCompanies"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete company",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/company/delete"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Company By id",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

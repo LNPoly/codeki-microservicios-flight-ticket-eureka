@@ -31,13 +31,13 @@ public class CompanyController {
         companyService.createCompany(company);
     }
 
-    @PutMapping("/update/")
+    @PutMapping("/update/{companyId}")
     public Optional<Company> updateCompany(@RequestBody Company company){
         return companyService.updateCompanyById(company);
     }
 
-    @DeleteMapping("/delete")
-    public void deleteCompanyById(@PathVariable Long id){
-        companyService.deleteCompanyById(id);
+    @DeleteMapping("/delete/{companyId}")
+    public void deleteCompanyById(@PathVariable Long companyId){
+        companyService.deleteCompanyById(companyId);
     }
 }

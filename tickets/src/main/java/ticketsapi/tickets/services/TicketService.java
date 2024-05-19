@@ -40,17 +40,9 @@ public class TicketService {
     }
 
     public Ticket updateTicketById(Long ticketId) {
-        //busco el tiket  modificar
-       Ticket ticketToModifi = tickets.stream()
+        return tickets.stream()
                 .filter(ticket -> ticket.getTicketId().equals(ticketId))
                 .findFirst()
                 .orElse(null);
-
-       if (ticketToModifi == null) throw new AssertionError("No se pudo realizar la accion");
-       //harcodeo los datos para actualizar el ticket
-       ticketToModifi.setDate("una fecha");
-       ticketToModifi.setPassengerName("un nombre");
-       ticketToModifi.setPassengerEmail("un email");
-       return ticketToModifi;
     }
 }

@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "1aeebd3e-8a01-4bce-a904-8a01481b4a52",
+		"name": "Flights",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "24011261"
+	},
+	"item": [
+		{
+			"name": "vuelo por id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/flights/2"
+			},
+			"response": []
+		},
+		{
+			"name": "traer todos los vuelos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/flights"
+			},
+			"response": []
+		},
+		{
+			"name": "crear vuelos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"origin\": \"Cordoba\",\r\n    \"destiny\": \"Buenos Aires\",\r\n    \"checkOut\": \"12/03/2024\",\r\n    \"checkIn\": \"12/04/2024\",\r\n    \"price\": 350.0,\r\n    \"frecuency\": \"Diaria\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:50066/flights/create/1"
+			},
+			"response": []
+		},
+		{
+			"name": "editar vuelos",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"origin\": \"Usuahia\",\r\n    \"destiny\": \"La Pampa\",\r\n    \"checkOut\": \"12/05/2024\",\r\n    \"checkIn\": \"12/05/2024\",\r\n    \"price\": 620.0,\r\n    \"frecuency\": \"Diaria\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/flights/update"
+			},
+			"response": []
+		},
+		{
+			"name": "eliminar vuelos",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/delete"
+			},
+			"response": []
+		},
+		{
+			"name": "traer precios",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/flights/price"
+			},
+			"response": []
+		},
+		{
+			"name": "traer dolar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/flights/price-dollar"
+			},
+			"response": []
+		}
+	]
+}
