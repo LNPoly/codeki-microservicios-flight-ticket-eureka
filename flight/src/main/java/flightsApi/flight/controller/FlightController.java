@@ -31,7 +31,7 @@ public class FlightController {
         return flightService.createFlight(flight, companyId);
     }
 
-    @GetMapping("/{flightId}") // busca vuelos por id
+    @GetMapping("/flights/{flightId}") // busca vuelos por id
     public FlightDto flightById(@PathVariable Long flightId) {
         return flightService.searchFlightById(flightId);
     }

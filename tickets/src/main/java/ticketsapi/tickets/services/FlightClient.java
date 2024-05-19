@@ -13,7 +13,7 @@ public interface FlightClient {
     @GetMapping("/flights") //trae todos los vuelos con la compania enlazada
     List<FlightDto> getAllFlights();
 
-    @GetMapping("/{flightId}")
+    @GetMapping("/flights/{flightId}")
     FlightDto flightById(@PathVariable Long flightId);
 
 }
