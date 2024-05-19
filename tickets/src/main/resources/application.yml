@@ -1,0 +1,29 @@
+#spring.application.name=tickets
+
+server:
+  port: 0
+
+spring:
+  application:
+    name: ticket-api
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.MySQLDialect
+#    showSql: true
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/flightsdatabase
+#    username: root
+#    password: root
+#    driverClassName: com.mysql.cj.jdbc.Driver
+
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
